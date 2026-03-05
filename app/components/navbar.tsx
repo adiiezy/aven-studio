@@ -180,151 +180,149 @@ import Link from "next/link"
 import gsap from "gsap"
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false)
 
-  const line1 = useRef<HTMLSpanElement>(null)
-  const line2 = useRef<HTMLSpanElement>(null)
-  const panelRef = useRef<HTMLDivElement>(null)
-  const navItems = useRef<HTMLLIElement[]>([])
+    const line1 = useRef<HTMLSpanElement>(null)
+    const line2 = useRef<HTMLSpanElement>(null)
+    const panelRef = useRef<HTMLDivElement>(null)
+    const navItems = useRef<HTMLLIElement[]>([])
 
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "auto"
-    if (open) {
-      gsap.to(line1.current, { rotate: 45, y: 4, duration: 0.3 })
-      gsap.to(line2.current, { rotate: -45, y: -4, duration: 0.3 })
+    useEffect(() => {
+        document.body.style.overflow = open ? "hidden" : "auto"
+        if (open) {
+            gsap.to(line1.current, { rotate: 45, y: 4, duration: 0.3 })
+            gsap.to(line2.current, { rotate: -45, y: -4, duration: 0.3 })
 
-      gsap.fromTo(
-        panelRef.current,
-        { x: "100%" },
-        { x: "0%", duration: 0.6, ease: "power3.out" }
-      )
+            gsap.fromTo(
+                panelRef.current,
+                { x: "100%" },
+                { x: "0%", duration: 0.6, ease: "power3.out" }
+            )
 
-      gsap.fromTo(
-        navItems.current,
-        { y: 40, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.1,
-          ease: "power3.out",
-          delay: 0.2,
+            gsap.fromTo(
+                navItems.current,
+                { y: 40, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: "power3.out",
+                    delay: 0.2,
+                }
+            )
+        } else {
+            gsap.to(line1.current, { rotate: 0, y: 0, duration: 0.3 })
+            gsap.to(line2.current, { rotate: 0, y: 0, duration: 0.3 })
+
+            gsap.to(panelRef.current, {
+                x: "100%",
+                duration: 0.5,
+                ease: "power3.in",
+            })
         }
-      )
-    } else {
-      gsap.to(line1.current, { rotate: 0, y: 0, duration: 0.3 })
-      gsap.to(line2.current, { rotate: 0, y: 0, duration: 0.3 })
+    }, [open])
 
-      gsap.to(panelRef.current, {
-        x: "100%",
-        duration: 0.5,
-        ease: "power3.in",
-      })
-    }
-  }, [open])
+    return (
+        <>
+            <header className="fixed top-0 left-0 w-full z-50 bg-black">
+                <div className="max-w-[1400px] mx-auto px-8 py-4 flex items-center justify-between">
+                    <div className="text-white text-xl font-semibold tracking-wide">
+                        AVEN<span className="text-orange-500 mx-1">✺</span>
+                        {!open || "Studio"}
+                    </div>
 
-  return (
-    <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-black">
-        <div className="max-w-[1400px] mx-auto px-8 py-4 flex items-center justify-between">
-          <div className="text-white text-xl font-semibold tracking-wide">
-            AVEN<span className="text-orange-500 mx-1">✺</span>
-            {!open || "Studio"}
-          </div>
+                    <div className="flex items-center">
+                        <button
+                            onClick={() => setOpen(!open)}
+                            className="relative w-8 h-8 mr-6"
+                        >
+                            <span
+                                ref={line1}
+                                className="absolute left-1/2 -translate-x-1/2 w-6 h-[2px] bg-white"
+                                style={{ top: "10px" }}
+                            />
+                            <span
+                                ref={line2}
+                                className="absolute left-1/2 -translate-x-1/2 w-6 h-[2px] bg-white"
+                                style={{ top: "18px" }}
+                            />
+                        </button>
 
-          <div className="flex items-center">
-            <button
-              onClick={() => setOpen(!open)}
-              className="relative w-8 h-8 mr-6"
-            >
-              <span
-                ref={line1}
-                className="absolute left-1/2 -translate-x-1/2 w-6 h-[2px] bg-white"
-                style={{ top: "10px" }}
-              />
-              <span
-                ref={line2}
-                className="absolute left-1/2 -translate-x-1/2 w-6 h-[2px] bg-white"
-                style={{ top: "18px" }}
-              />
-            </button>
+                        <button className="bg-white text-black px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition hidden sm:block">
+                            Contact us
+                        </button>
+                    </div>
+                </div>
+            </header>
 
-            <button className="bg-white text-black px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition hidden sm:block">
-              Contact us
-            </button>
-          </div>
-        </div>
-      </header>
+            <div className={`fixed inset-0 z-40 ${open ? "visible" : "invisible"}`}>
 
-      <div className={`fixed inset-0 z-40 ${open ? "visible" : "invisible"}`}>
-        
-        <div
-          onClick={() => setOpen(false)}
-          className="absolute left-0 top-0 h-full w-1/2 bg-black/70 backdrop-blur-md"
-        />
+                <div
+                    onClick={() => setOpen(false)}
+                    className="absolute left-0 top-0 h-full w-1/2 bg-black/70 backdrop-blur-md"
+                />
 
-        <div
-          ref={panelRef}
-          className="absolute right-0 top-0 h-full w-1/2 
-          bg-gradient-to-br from-black via-black to-red-900/30
-          text-white"
-        >
-          <div className="px-8 py-24 lg:px-36 lg:py-32 h-full flex flex-col">
-
-            <nav className="flex-1 flex items-center">
-              <ul className="space-y-6">
-
-                {[
-                  { name: "Home", href: "/en" },
-                  { name: "Projects", href: "/en/projects" },
-                  { name: "Services", href: "/en/services" },
-                  { name: "Studio", href: "/en/about" },
-                  { name: "Contact", href: "/en/contact" },
-                ].map((item, i) => (
-                  <li
-                    key={i}
-                    ref={(el) => {
-                      if (el) navItems.current[i] = el
-                    }}
-                    className="opacity-0"
-                  >
-                    <Link
-                      href={item.href}
-                      className="block text-2xl text-white hover:text-white/60 transition-colors duration-300"
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-
-              </ul>
-            </nav>
-
-            <div className="flex items-center gap-x-12 mt-12">
-              <div>
-                <p className="text-xs text-orange-500 mb-2">Email</p>
-                <a
-                  href="mailto:hello@akis.studio"
-                  className="text-white hover:text-white/80 transition-colors"
+                <div
+                    ref={panelRef}
+                    className="fixed top-0 right-0 w-full sm:w-2/3 lg:w-7/12 h-screen bg-black/90 backdrop-blur-md transform transition-transform duration-500 ease-out z-901 translate-x-0"
                 >
-                  hello@akis.studio
-                </a>
-              </div>
+                    <div className="px-8 py-24 lg:px-36 lg:py-32 h-full flex flex-col">
 
-              <div>
-                <p className="text-xs text-orange-500 mb-2">New client</p>
-                <Link
-                  href="/en/contact"
-                  className="text-white hover:text-white/80 transition-colors"
-                >
-                  Let&apos;s talk about your project
-                </Link>
-              </div>
+                        <nav className="flex-1 flex items-center">
+                            <ul className="space-y-6">
+
+                                {[
+                                    { name: "Home", href: "/en" },
+                                    { name: "Projects", href: "/en/projects" },
+                                    { name: "Services", href: "/en/services" },
+                                    { name: "Studio", href: "/en/about" },
+                                    { name: "Contact", href: "/en/contact" },
+                                ].map((item, i) => (
+                                    <li
+                                        key={i}
+                                        ref={(el) => {
+                                            if (el) navItems.current[i] = el
+                                        }}
+                                        className="opacity-0"
+                                    >
+                                        <Link
+                                            href={item.href}
+                                            className="block text-6xl text-white hover:text-white/60 transition-colors duration-300"
+                                        >
+                                            {item.name}
+                                        </Link>
+                                    </li>
+                                ))}
+
+                            </ul>
+                        </nav>
+
+                        <div className="flex items-center gap-x-12 mt-12">
+                            <div>
+                                <p className="text-xs text-orange-500 mb-2">Email</p>
+                                <a
+                                    href="mailto:hello@akis.studio"
+                                    className="text-white hover:text-white/80 transition-colors"
+                                >
+                                    hello@akis.studio
+                                </a>
+                            </div>
+
+                            <div>
+                                <p className="text-xs text-orange-500 mb-2">New client</p>
+                                <Link
+                                    href="/en/contact"
+                                    className="text-white hover:text-white/80 transition-colors"
+                                >
+                                    Let&apos;s talk about your project
+                                </Link>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
-
-          </div>
-        </div>
-      </div>
-    </>
-  )
+        </>
+    )
 }
