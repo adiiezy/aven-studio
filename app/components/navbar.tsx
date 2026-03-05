@@ -288,7 +288,7 @@ export default function Navbar() {
                                     >
                                         <Link
                                             href={item.href}
-                                            className="block text-6xl text-white hover:text-white/60 transition-colors duration-300"
+                                            className="block text-5xl text-white hover:text-white/60 transition-colors duration-300"
                                         >
                                             {item.name}
                                         </Link>
