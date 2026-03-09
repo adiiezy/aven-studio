@@ -77,8 +77,8 @@ function ProjectCard({ project }: { project: Project }) {
   };
 
   return (
-    <li className="group relative list-none">
-      <Link href={`/en/projects/${project.slug}`} title={project.title}>
+    <li className="group relative bg-radial-[at_-10%_0%] from-black/30 via-black/40 to-black/50 backdrop-blur-md rounded-[10px] border-1 border-dark-10/40 w-full max-w-[360px] xl:max-w-[585px] overflow-hidden">
+      <Link href={`/projects/${project.slug}`} title={project.title}>
         <div 
           className="relative w-full overflow-hidden rounded-xl bg-[#111]"
           onMouseEnter={handleMouseEnter}
@@ -131,7 +131,7 @@ export default function ProjectsSection() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8 mb-20">
           <div>
             <h2 className="text-orange-500 font-mono tracking-widest uppercase text-sm mb-4">
-              // Portfolio
+             Portfolio
             </h2>
             <h1 className="text-4xl lg:text-6xl font-bold text-white">Recent Projects</h1>
           </div>
@@ -150,7 +150,7 @@ export default function ProjectsSection() {
               <h4 className="text-2xl font-bold text-white mb-4">Got a project in mind?</h4>
               <p className="text-gray-400 text-sm mb-8">Free 30 minute consultation for your next big idea.</p>
               <Link
-                href="/en/contact"
+                href="/contact"
                 className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-orange-500 hover:text-white transition-all duration-300"
               >
                 Let&apos;s talk
@@ -161,7 +161,7 @@ export default function ProjectsSection() {
 
         <div className="flex justify-center">
           <Link
-            href="/en/projects"
+            href="/projects"
             className="text-gray-300 hover:text-white py-3 px-6 text-sm inline-flex items-center gap-3 transition-colors duration-300 group font-medium"
           >
             All projects

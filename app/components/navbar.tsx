@@ -83,7 +83,7 @@
 
 //                     </div>
 //                      */}
-//                     {/* <div className="px-8 py-24 lg:px-36 lg:py-32 h-full flex flex-col" ><nav className="flex-1 flex items-center" aria-label="Main menu"><ul className="space-y-4"><li className="overflow-hidden"><a data-animate="navLink-menu" className="text-para-l block xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/en"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Home</a></li> <li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/en/projects"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Projects</a></li><li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/en/services"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Services</a></li><li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/en/about"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Studio</a></li><li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/en/contact"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Contact</a></li><!----></ul></nav> <div className="flex items-center gap-x-6 xs:gap-x-12" ><div data-animate="navLink"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><p className="text-para-xs xs:text-title-s text-primary mb-2">Email</p> <a className="text-para-xs xs:text-title-s text-white hover:text-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90 plausible-event-name=Nav+Email+Click" href="mailto:hello@akis.studio" >hello@akis.studio</a>x</div> <div data-animate="navLink"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><p className="text-para-xs xs:text-title-s text-primary mb-2">New client</p> <a className="text-para-xs xs:text-title-s text-white hover:text-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/en/contact" >Let's talk about your project</a></div></div></div> */}
+//                     {/* <div className="px-8 py-24 lg:px-36 lg:py-32 h-full flex flex-col" ><nav className="flex-1 flex items-center" aria-label="Main menu"><ul className="space-y-4"><li className="overflow-hidden"><a data-animate="navLink-menu" className="text-para-l block xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/en"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Home</a></li> <li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/projects"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Projects</a></li><li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/services"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Services</a></li><li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/about"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Studio</a></li><li className="overflow-hidden"><a data-animate="navLink-menu" className=" block text-para-l xs:text-title-xxl text-white hover:text-white/60 duration-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/contact"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">Contact</a></li><!----></ul></nav> <div className="flex items-center gap-x-6 xs:gap-x-12" ><div data-animate="navLink"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><p className="text-para-xs xs:text-title-s text-primary mb-2">Email</p> <a className="text-para-xs xs:text-title-s text-white hover:text-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90 plausible-event-name=Nav+Email+Click" href="mailto:hello@akis.studio" >hello@akis.studio</a>x</div> <div data-animate="navLink"  style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;"><p className="text-para-xs xs:text-title-s text-primary mb-2">New client</p> <a className="text-para-xs xs:text-title-s text-white hover:text-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90" href="/contact" >Let's talk about your project</a></div></div></div> */}
 //                     <div className="px-8 py-24 lg:px-36 lg:py-32 h-full flex flex-col">
 
 //                         <nav className="flex-1 flex items-center" aria-label="Main menu">
@@ -100,7 +100,7 @@
 
 //                                 <li className="overflow-hidden">
 //                                     <Link
-//                                         href="/en/projects"
+//                                         href="/projects"
 //                                         className="block text-para-l xs:text-title-xxl text-white hover:text-white/60 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90"
 //                                     >
 //                                         Projects
@@ -109,7 +109,7 @@
 
 //                                 <li className="overflow-hidden">
 //                                     <Link
-//                                         href="/en/services"
+//                                         href="/services"
 //                                         className="block text-para-l xs:text-title-xxl text-white hover:text-white/60 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90"
 //                                     >
 //                                         Services
@@ -118,7 +118,7 @@
 
 //                                 <li className="overflow-hidden">
 //                                     <Link
-//                                         href="/en/about"
+//                                         href="/about"
 //                                         className="block text-para-l xs:text-title-xxl text-white hover:text-white/60 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90"
 //                                     >
 //                                         Studio
@@ -127,7 +127,7 @@
 
 //                                 <li className="overflow-hidden">
 //                                     <Link
-//                                         href="/en/contact"
+//                                         href="/contact"
 //                                         className="block text-para-l xs:text-title-xxl text-white hover:text-white/60 transition-colors duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90"
 //                                     >
 //                                         Contact
@@ -156,7 +156,7 @@
 //                                     New client
 //                                 </p>
 //                                 <Link
-//                                     href="/en/contact"
+//                                     href="/contact"
 //                                     className="text-para-xs xs:text-title-s text-white hover:text-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-black/90"
 //                                 >
 //                                     Let&apos;s talk about your project
@@ -274,10 +274,10 @@ export default function Navbar() {
 
                                 {[
                                     { name: "Home", href: "/en" },
-                                    { name: "Projects", href: "/en/projects" },
-                                    { name: "Services", href: "/en/services" },
-                                    { name: "Studio", href: "/en/about" },
-                                    { name: "Contact", href: "/en/contact" },
+                                    { name: "Projects", href: "/projects" },
+                                    { name: "Services", href: "/services" },
+                                    { name: "Studio", href: "/about" },
+                                    { name: "Contact", href: "/contact" },
                                 ].map((item, i) => (
                                     <li
                                         key={i}
@@ -312,7 +312,7 @@ export default function Navbar() {
                             <div>
                                 <p className="text-xs text-orange-500 mb-2">New client</p>
                                 <Link
-                                    href="/en/contact"
+                                    href="/contact"
                                     className="text-white hover:text-white/80 transition-colors"
                                 >
                                     Let&apos;s talk about your project

@@ -22,7 +22,7 @@ const services = [
 
 export default function ServicesSection() {
     return (
-        <section className="relative w-full py-32  overflow-hidden bg-black">
+        <section className="relative w-full py-32  overflow-hidden bg-black h-[1050px] flex justify-center align-center">
 
             {/* <div className="absolute inset-0 flex justify-center pointer-events-none -top-[150px]">
         <div className="w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,#ff0000_0%,#7a0000_40%,transparent_70%)] blur-[120px] opacity-70" />
@@ -86,7 +86,7 @@ export default function ServicesSection() {
                     data-animate="item"
                 >
                     <Link
-                        href="/en/about"
+                        href="/about"
                         className="w-fit text-neutral-200 py-3 pr-3 text-sm inline-flex items-center gap-3 transition-colors duration-300 group"
                     >
                         Discover the studio

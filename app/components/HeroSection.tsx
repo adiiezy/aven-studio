@@ -51,7 +51,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="absolute inset-0 opacity-[0.08] bg-[url('/noise.png')] mix-blend-screen pointer-events-none" />
+      {/* <div className="absolute inset-0 opacity-[0.08] bg-[url('/noise.png')] mix-blend-screen pointer-events-none" /> */}
 
       <div className="relative z-10 flex items-center min-h-screen px-8 lg:px-20">
         <div className="max-w-3xl">

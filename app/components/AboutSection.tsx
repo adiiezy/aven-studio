@@ -53,7 +53,7 @@ export default function AboutSection() {
           data-animate="item"
         >
           <Link
-            href="/en/about"
+            href="/about"
             className="w-fit text-neutral-200 py-3 pr-3 text-sm inline-flex items-center gap-3 transition-colors duration-300 group"
           >
             Discover the studio

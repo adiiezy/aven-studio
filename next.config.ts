@@ -1,16 +1,18 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-    images: {
+  images: {
     remotePatterns: [
       {
         protocol: "https",
         hostname: "admin.akis.studio",
+        pathname: "/**",
       },
       {
-        protocol:"https",
-        hostname:"images.unsplash.com"
-      }
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
     ],
   },
 };
