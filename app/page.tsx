@@ -3,6 +3,9 @@ import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
 import ProjectsSection from "./components/ProjectSection";
 import TestimonialsSection from "./components/TestimonialsSection";
+import FAQ from "./components/FAQ";
+import CTASection from "./components/CTASection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -12,6 +15,14 @@ export default function Home() {
       <ServicesSection />
       <ProjectsSection />
       <TestimonialsSection />
+      <FAQ />
+      <CTASection
+        heading="Ready to have an image that matches your ambition?"
+        ctaText="Start now"
+        ctaLink="/contact"
+        image="/bg_cta.SDXiTeDA.webp"
+      />
+      <Footer/>
     </main>
   );
 }
