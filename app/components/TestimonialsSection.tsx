@@ -78,7 +78,7 @@ export default function TestimonialSection() {
       <div className="mt-20">
         <Swiper
           modules={[Autoplay]}
-          spaceBetween={40}
+          spaceBetween={60}
           slidesPerView={2}
           loop
           speed={700}
@@ -89,10 +89,10 @@ export default function TestimonialSection() {
           breakpoints={{
             640: { slidesPerView: 3 },
             768: { slidesPerView: 4 },
-            1024: { slidesPerView: 6 },
-            1280: { slidesPerView: 8 },
+            1024: { slidesPerView: 5 },
+            1280: { slidesPerView: 5 },
           }}
-          className="max-w-7xl mx-auto px-6"
+          className="w-full px-6"
         >
           {clientLogos.map((logo, index) => (
             <SwiperSlide key={index} className="flex justify-center">
