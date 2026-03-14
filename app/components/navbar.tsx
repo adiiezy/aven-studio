@@ -227,8 +227,8 @@ export default function Navbar() {
         <>
             <header className="fixed top-0 left-0 w-full z-50 bg-black">
                 <div className="max-w-[1400px] mx-auto px-8 py-4 flex items-center justify-between">
-                    <div className="text-white text-xl font-semibold tracking-wide">
-                        AVEN<span className="text-orange-500 mx-1">✺</span>
+                    <div className="text-white text-xl font-semibold tracking-wide"  >
+                        AVEN<span className="text-navy-bright mx-1">✺</span>
                         {!open || "Studio"}
                     </div>
 

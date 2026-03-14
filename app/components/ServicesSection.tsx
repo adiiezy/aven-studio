@@ -1,113 +1,169 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const services = [
-    {
-        id: "01",
-        title: "Web Development",
-        description:
-            "Performance, security, scalability. A website built to last.",
-        image:
-            "https://admin.akis.studio/assets/fa3d3cf0-08a7-4f53-bb9b-265d3bcec247/fa3d3cf0-08a7-4f53-bb9b-265d3bcec247.png",
-    },
-    {
-        id: "02",
-        title: "Web Design",
-        description:
-            "UX, UI, prototypes. Interfaces designed around real user needs.",
-        image:
-            "https://admin.akis.studio/assets/a213cc52-ebef-43ba-9a79-d4b733395d77/a213cc52-ebef-43ba-9a79-d4b733395d77.png",
-    },
+  {
+    id: "01",
+    title: "Web Development",
+    description:
+      "High-performance websites engineered for scalability, security, and long-term growth.",
+    icon: "code",
+  },
+  {
+    id: "02",
+    title: "Web Design",
+    description:
+      "User-centered design that blends aesthetics and usability to create memorable experiences.",
+    icon: "design",
+  },
 ];
 
 export default function ServicesSection() {
-    return (
-        <section className="relative w-full py-32  overflow-hidden bg-black h-[1050px] flex justify-center align-center">
+  return (
+    <section className="relative w-full py-32 overflow-hidden bg-black flex justify-center">
 
-            {/* <div className="absolute inset-0 flex justify-center pointer-events-none -top-[150px]">
-        <div className="w-[900px] h-[900px] bg-[radial-gradient(circle_at_center,#ff0000_0%,#7a0000_40%,transparent_70%)] blur-[120px] opacity-70" />
-      </div> */}
+      {/* Background glow */}
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 pointer-events-none">
+        <div className="w-[1100px] h-[700px] bg-[radial-gradient(circle_at_center,var(--color-navy-bright),transparent_70%)] opacity-20 blur-[180px]" />
+      </div>
 
-            <div className="absolute left-1/2 top-0 -translate-x-1/2  pointer-events-none">
-                <img
-                    src="/diamant.png"
-                    alt=""
-                    className="w-[1400px] max-w-none opacity-70 blur-[140px]"
-                />
+      <div className="relative max-w-7xl mx-auto px-6">
+
+        {/* Section Header */}
+        <div className="text-center mb-20">
+          <p className="text-sm text-[var(--color-navy-bright)] mb-4 tracking-[0.25em]">
+            SERVICES
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-semibold text-white">
+            From strategy to launch.
+          </h2>
+        </div>
+
+        {/* Cards */}
+        <div className="grid md:grid-cols-2 gap-8">
+
+          {services.map((service) => (
+            <div
+              key={service.id}
+              className="
+              group relative rounded-2xl
+              border border-white/10
+              bg-white/[0.04]
+              backdrop-blur-lg
+              p-10
+              flex flex-col justify-between
+              overflow-hidden
+              transition-all duration-500
+              hover:-translate-y-2
+              hover:bg-white/[0.07]
+              hover:backdrop-blur-2xl
+              hover:border-[var(--color-navy-bright)]/40
+              "
+            >
+
+              {/* Glass reflection */}
+              <div
+                className="
+                absolute inset-0
+                opacity-0
+                group-hover:opacity-100
+                transition duration-500
+                bg-gradient-to-br
+                from-white/20
+                via-white/5
+                to-transparent
+                pointer-events-none
+                "
+              />
+
+              {/* Navy glow */}
+              <div
+                className="
+                absolute inset-0
+                opacity-0
+                group-hover:opacity-100
+                transition duration-500
+                bg-[radial-gradient(circle_at_30%_20%,var(--color-navy-bright),transparent_70%)]
+                blur-xl
+                "
+              />
+
+              {/* Card Content */}
+              <div className="relative z-10">
+
+                <p className="text-xs text-gray-500 mb-4 tracking-wider">
+                  {service.id}
+                </p>
+
+                {/* Icon */}
+                <div className="mb-6 text-[var(--color-navy-bright)]">
+
+                  {service.icon === "code" && (
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                      <path
+                        d="M8 16L4 12L8 8M16 8L20 12L16 16"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  )}
+
+                  {service.icon === "design" && (
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+                      <circle
+                        cx="12"
+                        cy="12"
+                        r="8"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                      />
+                      <circle cx="12" cy="12" r="3" fill="currentColor" />
+                    </svg>
+                  )}
+
+                </div>
+
+                <h3 className="text-2xl font-semibold text-white mb-4">
+                  {service.title}
+                </h3>
+
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {service.description}
+                </p>
+
+              </div>
+
             </div>
+          ))}
 
-            <div className="relative max-w-7xl mx-auto px-6">
+        </div>
 
-                <div className="text-center mb-20">
-                    <p className="text-sm text-red-500 mb-4 tracking-widest">
-                        SERVICES
-                    </p>
+        {/* CTA */}
+        <div className="flex justify-center mt-16">
+          <Link
+            href="/about"
+            className="text-neutral-200 py-3 text-sm inline-flex items-center gap-3 transition-colors duration-300 group"
+          >
+            Discover the studio
 
-                    <h2 className="text-4xl md:text-5xl font-semibold text-white">
-                        From strategy to launch.
-                    </h2>
-                </div>
+            <svg
+              width="7"
+              height="12"
+              viewBox="0 0 7 12"
+              className="fill-none stroke-neutral-200 transition-transform duration-300 group-hover:translate-x-1"
+            >
+              <path
+                d="M6.27 6.02L1.06 0.81L0.30 1.57L4.74 6.02L0.30 10.46L1.06 11.22L6.27 6.02Z"
+                strokeWidth="1.5"
+              />
+            </svg>
 
-                <div className="grid md:grid-cols-2 gap-8">
+          </Link>
+        </div>
 
-                    {services.map((service) => (
-                        <div
-                            key={service.id}
-                            className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-10 flex justify-between items-end overflow-hidden"
-                        >
-                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_left,#ff0000_0%,#800000_30%,transparent_70%)]" />
-
-                            <div className="relative z-10 max-w-[260px]">
-                                <p className="text-xs text-gray-400 mb-3">{service.id}</p>
-
-                                <h3 className="text-2xl font-semibold text-white mb-4">
-                                    {service.title}
-                                </h3>
-
-                                <p className="text-sm text-gray-400">
-                                    {service.description}
-                                </p>
-                            </div>
-
-                            <div className="relative z-10">
-                                <Image
-                                    src={service.image}
-                                    alt={service.title}
-                                    width={200}
-                                    height={200}
-                                />
-                            </div>
-                        </div>
-                    ))}
-
-                </div>
-                <div
-                    className="flex justify-end lg:justify-center mt-8 mb-12"
-                    data-animate="item"
-                >
-                    <Link
-                        href="/about"
-                        className="w-fit text-neutral-200 py-3 pr-3 text-sm inline-flex items-center gap-3 transition-colors duration-300 group"
-                    >
-                        Discover the studio
-
-                        <svg
-                            width="7"
-                            height="12"
-                            viewBox="0 0 7 12"
-                            xmlns="http://www.w3.org/2000/svg"
-                            aria-hidden="true"
-                            className="fill-none stroke-neutral-200 transition-transform duration-300 group-hover:translate-x-1"
-                        >
-                            <path
-                                fillRule="evenodd"
-                                clipRule="evenodd"
-                                d="M6.27092 6.01913L1.06893 0.817139L0.306641 1.57943L4.74965 6.02245L0.306771 10.4653L1.06907 11.2276L6.2739 6.02279L6.27058 6.01947L6.27092 6.01913Z"
-                            />
-                        </svg>
-                    </Link>
-                </div>
-            </div>
-        </section>
-    );
+      </div>
+    </section>
+  );
 }
