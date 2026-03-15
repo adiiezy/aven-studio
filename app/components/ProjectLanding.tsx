@@ -7,7 +7,7 @@ import { Flip } from "gsap/all"
 
 gsap.registerPlugin(Flip)
 
-type Category = "All" | "Design" | "Development" | "Marketing"
+type Category = "All" | "Design" | "Development" 
 
 type Project = {
   id: number
@@ -16,10 +16,10 @@ type Project = {
   image: string
 }
 
-const categories: Category[] = ["All", "Design", "Development", "Marketing"]
+const categories: Category[] = ["All", "Design", "Development"]
 
 const projects: Project[] = Array.from({ length: 20 }).map((_, i) => {
-  const cats: Category[] = ["Design", "Development", "Marketing"]
+  const cats: Category[] = ["Design", "Development"]
 
   return {
     id: i + 1,

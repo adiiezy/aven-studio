@@ -186,7 +186,6 @@ export default function ProjectsSection() {
             <ProjectCard key={project.id} project={project} />
           ))}
 
-          {/* CTA card */}
           <li className="list-none">
             <div className="aspect-[5/4] bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-xl flex flex-col items-center justify-center p-12 text-center group">
               <h4 className="text-2xl font-bold text-white mb-4">

@@ -7,6 +7,7 @@ import FAQ from "./components/FAQ";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 import ServicesSection1 from "./components/ServicesSection1";
+import ServicesSection2 from "./components/second";
 
 export default function Home() {
   return (
@@ -15,6 +16,9 @@ export default function Home() {
       <AboutSection />
       <ServicesSection />
       <ServicesSection1 />
+      <ServicesSection2 
+      />
+
       <ProjectsSection />
       <TestimonialsSection />
       <FAQ />
@@ -24,7 +28,7 @@ export default function Home() {
         ctaLink="/contact"
         image="/bg_cta.SDXiTeDA.webp"
       />
-      <Footer/>
+      <Footer />
     </main>
   );
 }
